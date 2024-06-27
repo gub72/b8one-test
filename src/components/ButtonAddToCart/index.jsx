@@ -8,7 +8,7 @@ const ButtonAddToCart = () => {
   };
   return (
     <button
-      className={"addCartButton" + (addToCart ? " addCartButton--active" : "")}
+      className={"add-to-cart-btn" + (addToCart ? " add-to-cart-btn--active" : "")}
       onClick={() => handleAddToCart()}
     >
       {addToCart ? "Adicionado" : "Adicionar"}

@@ -11,7 +11,7 @@ const ButtonWish = ({ isFavorite }) => {
   return (
     <>
       <button
-        className={"productWishBtn" + (fav ? "--active" : "")}
+        className={"product-wish-btn" + (fav ? "--active" : "")}
         onClick={() => toggleWish(!fav)}
       />
     </>

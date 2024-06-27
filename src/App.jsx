@@ -2,7 +2,6 @@ import React from "react";
 import productImage from "./assets/image/productImage.png";
 import Product from "./components/Product";
 
-
 function App() {
   const products = [
     {
@@ -47,7 +46,7 @@ function App() {
             listPrice = {listPrice}
             sellingPrice = {sellingPrice}
           />
-        ))}
+      ))}
     </div>
   );
 }

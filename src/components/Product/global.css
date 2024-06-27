@@ -1,0 +1,100 @@
+:root {
+  --card-background-color: #fff;
+
+  --product-name-font-color: #1c1c1c;
+
+  --list-price-font-color: #b5b5b6;
+  --selling-price-font-color: #da4b4f;
+  --installments-font-color: #848587;
+}
+
+.container-card-product {
+  box-sizing: border-box;
+  max-width: 304px;
+}
+
+.container-card-product {
+  cursor: pointer;
+  padding: 32px;
+  border-radius: 8px;
+  background: var(--card-background-color);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.container-card-product {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container-card-product:hover {
+  box-shadow: 0px 8px 24px 0px rgb(0, 0, 0, 0.08);
+}
+
+.container-btnwish {
+  position: absolute;
+  right: 36px;
+}
+
+.product-name {
+  margin: 33px 0 0;
+  color: var(--product-name-font-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.product-name {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.container-image-and-btnwish {
+  position: relative;
+}
+
+.product-image {
+  width: 100%;
+  max-height: 240px;
+  flex-shrink: 0;
+}
+
+.container-product-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.list-price {
+  margin-top: 14px;
+  color: var(--list-price-font-color);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.07px;
+  text-decoration: line-through;
+}
+
+.selling-price {
+  margin-top: 4px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  color: var(--selling-price-font-color);
+}
+
+.pay-in-installments {
+  margin-top: 4px;
+  color: var(--installments-font-color);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.pay-in-installments span {
+  color: var(--product-name-font-color);
+}

@@ -12,13 +12,43 @@ const Product = ({
   sellingPrice
 }) => {
   return (
-    <div className="productContainer">
-      <ButtonWish isFavorite={isFavorite}/>
-      <p>{payInInstallments}</p>
-      <p>{productName}</p>
-      <p>{image}</p>
-      <p>{listPrice}</p>
-      <p>{sellingPrice}</p>
+    <div className="container-card-product">
+      <div className='container-image-and-btnwish'>
+        <div className="container-btnwish">
+          <ButtonWish isFavorite={isFavorite}/>
+        </div>
+        <img className="product-image" src={image} alt={productName} />
+      </div>
+      <div className="container-product-content">
+        <p className="product-name">{productName}</p>
+        <div className="container-price-product">
+          <p className="list-price">
+            R${" "}
+            {listPrice.toLocaleString("pt-BR", {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}
+          </p>
+          <p className="selling-price">
+            R${" "}
+            {sellingPrice.toLocaleString("pt-BR", {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}
+          </p>
+          <p className="pay-in-installments">
+            em até{" "}
+            <span>
+              {payInInstallments}x de R${" "}
+              {(sellingPrice / payInInstallments).toLocaleString("pt-BR", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              })}{" "}
+            </span>
+            sem juros
+          </p>
+        </div>
+      </div>
 
       <ButtonAddToCart />
     </div>

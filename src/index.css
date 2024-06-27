@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+
+:root {
+  font-family: Inter, sans-serif;
+  --backgroud-color: #e9ebee;
+}
+
+p,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--backgroud-color);
+}
+
+.App {
+  padding: 16px;
+  height: 100vh;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
