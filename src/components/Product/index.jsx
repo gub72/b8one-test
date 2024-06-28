@@ -4,18 +4,20 @@ import ButtonWish from "../ButtonWish";
 import './global.css'
 
 const Product = ({
+  productSku,
   isFavorite,
   payInInstallments,
   productName,
   image,
   listPrice,
-  sellingPrice
+  sellingPrice, 
+  onToggleWish
 }) => {
   return (
     <div className="container-card-product">
       <div className='container-image-and-btnwish'>
         <div className="container-btnwish">
-          <ButtonWish isFavorite={isFavorite}/>
+          <ButtonWish isFavorite={isFavorite} onToggleWish={() => onToggleWish(productSku)}/>
         </div>
         <img className="product-image" src={image} alt={productName} />
       </div>

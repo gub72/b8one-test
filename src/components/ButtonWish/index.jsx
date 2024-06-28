@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import './global.css'
 
-const ButtonWish = ({ isFavorite }) => {
+const ButtonWish = ({ isFavorite, onToggleWish }) => {
   const [fav, setFav] = useState(isFavorite);
 
-  const toggleWish = (fav) => {
-    setFav(fav);
+  useEffect(() => {
+    setFav(isFavorite);
+  }, [isFavorite]);
+
+  const toggleWish = () => {
+    setFav(!fav);
+    onToggleWish();
   };
 
   return (
