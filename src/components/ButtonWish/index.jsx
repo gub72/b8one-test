@@ -5,7 +5,7 @@ const ButtonWish = ({ isFavorite, onToggleWish }) => {
     <>
       <button
         className={"product-wish-btn" + (isFavorite ? "--active" : "")}
-        onClick={() => onToggleWish()}
+        onClick={onToggleWish}
       />
     </>
   );
